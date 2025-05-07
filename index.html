@@ -1,0 +1,1983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samfya Waterfront Hotel | Luapula's Premier Lakeside Retreat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #FF6B35; /* Orange */
+            --secondary: #87CEEB; /* Sky Blue */
+            --accent: #FFB347; /* Light Orange */
+            --light: #f8f9fa;
+            --dark: #202124;
+            --sand: #f5e1b9;
+            --water: #a8d5e2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+        
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn:hover {
+            background-color: #0d5bbc;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #2d8e47;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .logo:hover::after {
+            width: 100%;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--dark);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+        
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero-btns {
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+        
+        .hero-btns .btn {
+            margin: 0 10px;
+        }
+        
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+        
+        .scroll-down i {
+            font-size: 30px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--dark);
+            color: white;
+            position: relative;
+        }
+        
+        .about::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('water1.png') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .about-image img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Rooms Section */
+        .rooms {
+            background-color: white;
+            color: var(--dark);
+            padding: 100px 0;
+        }
+        
+        .rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .room-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .room-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        
+        .room-info {
+            padding: 20px;
+        }
+        
+        .room-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .room-price {
+            margin: 15px 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .room-price .price {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .room-price .currency {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        .room-price .usd {
+            color: var(--primary);
+        }
+        
+        .room-price .zmw {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .room-price .per-night {
+            font-size: 0.9rem;
+            color: #666;
+            margin-left: 5px;
+        }
+        
+        /* Amenities Section */
+        .amenities {
+            background-color: white;
+            color: var(--dark);
+            padding: 100px 0;
+        }
+        
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .amenity-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            background: var(--light);
+            transition: transform 0.3s ease;
+        }
+        
+        .amenity-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .amenity-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .amenity-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Gallery Section */
+        .gallery {
+            background-color: white;
+            color: var(--dark);
+            padding: 100px 0;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+            color: var(--dark);
+            padding: 100px 0;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        
+        .contact-info {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-map {
+            width: 100%;
+            height: 450px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-info i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-info h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-menu.active {
+            display: flex;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
+        .mobile-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+        
+        .mobile-menu ul li {
+            margin: 20px 0;
+        }
+        
+        .mobile-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-menu ul li a:hover {
+            color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .rooms-grid,
+            .amenities-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+        
+        .slide-up {
+            animation: slideUp 1s ease;
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 1s ease;
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInRight {
+            from {
+                transform: translateX(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        /* Tourism Section */
+        .tourism {
+            background-color: white;
+            color: var(--dark);
+        }
+        
+        .tourism-slide {
+            position: relative;
+        }
+        
+        .slide-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+        }
+        
+        .slide-content h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-text-stroke: 1px white;
+        }
+        
+        .slide-content p {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            -webkit-text-stroke: 0.5px white;
+        }
+        
+        .tourism-slider {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        
+        .tourism-slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .tourism-slide {
+            min-width: 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+        
+        .tourism-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        
+        .slider-btn {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: var(--dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-btn:hover {
+            background-color: white;
+        }
+        
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-dot.active {
+            background-color: var(--primary);
+        }
+        
+        /* Booking Section */
+        .booking {
+            background-color: var(--dark);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .booking-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .booking-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .booking-info {
+            flex: 1;
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .booking-info ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .booking-info ul li {
+            color: white;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .booking-info ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        /* Loyalty Program */
+        .loyalty {
+            background-color: white;
+            color: var(--dark);
+            padding: 100px 0;
+        }
+        
+        .loyalty-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .loyalty-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .loyalty-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .loyalty-image img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .loyalty-steps {
+            margin-top: 30px;
+        }
+        
+        .loyalty-step {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h4 {
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            color: inherit;
+            font-weight: 500;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background-color: inherit;
+            color: white;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .tourism-slide img {
+                height: 350px;
+            }
+        }
+        
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            background-color: inherit;
+            color: white;
+        }
+        
+        .payment-method:hover {
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        .payment-method input[type="radio"] {
+            margin: 0;
+        }
+        
+        .payment-method label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .payment-method i {
+            font-size: 1.2rem;
+        }
+        
+        .payment-method .fa-cc-mastercard {
+            color: #EB001B;
+        }
+        
+        .payment-method .fa-cc-visa {
+            color: #1A1F71;
+        }
+        
+        .payment-method .fa-mobile-alt {
+            color: var(--primary);
+        }
+        
+        /* Section Background Colors */
+        .about, .gallery, .booking {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .rooms, .amenities, .tourism, .loyalty, .contact {
+            background-color: white;
+            color: var(--dark);
+        }
+        
+        /* Dark Section Specific Styles */
+        .about h2, .gallery h2, .booking h2,
+        .about h3, .gallery h3, .booking h3,
+        .about p, .gallery p, .booking p {
+            color: white;
+        }
+        
+        .about .btn, .gallery .btn, .booking .btn {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .about .btn:hover, .gallery .btn:hover, .booking .btn:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Light Section Specific Styles */
+        .rooms h2, .amenities h2, .tourism h2, .loyalty h2, .contact h2,
+        .rooms h3, .amenities h3, .tourism h3, .loyalty h3, .contact h3,
+        .rooms p, .amenities p, .tourism p, .loyalty p, .contact p {
+            color: var(--dark);
+        }
+        
+        .rooms .btn, .amenities .btn, .tourism .btn, .loyalty .btn, .contact .btn {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .rooms .btn:hover, .amenities .btn:hover, .tourism .btn:hover, .loyalty .btn:hover, .contact .btn:hover {
+            background-color: var(--accent);
+        }
+        
+        /* Room Cards in Dark Sections */
+        .about .room-card, .gallery .room-card, .booking .room-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .about .room-info, .gallery .room-info, .booking .room-info {
+            color: white;
+        }
+        
+        /* Contact Form in Dark Sections */
+        .about .contact-form input,
+        .about .contact-form textarea,
+        .gallery .contact-form input,
+        .gallery .contact-form textarea,
+        .booking .contact-form input,
+        .booking .contact-form textarea {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .about .contact-form input::placeholder,
+        .about .contact-form textarea::placeholder,
+        .gallery .contact-form input::placeholder,
+        .gallery .contact-form textarea::placeholder,
+        .booking .contact-form input::placeholder,
+        .booking .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Payment Methods in Dark Sections */
+        .about .payment-method,
+        .gallery .payment-method,
+        .booking .payment-method {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .about .payment-method:hover,
+        .gallery .payment-method:hover,
+        .booking .payment-method:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary);
+        }
+        
+        /* Contact Info in Dark Sections */
+        .about .contact-info,
+        .gallery .contact-info,
+        .booking .contact-info {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Tourism Slider in Light Sections */
+        .rooms .tourism-slider,
+        .amenities .tourism-slider,
+        .tourism .tourism-slider,
+        .loyalty .tourism-slider,
+        .contact .tourism-slider {
+            background-color: var(--light);
+        }
+        
+        /* Amenity Cards in Dark Sections */
+        .about .amenity-card,
+        .gallery .amenity-card,
+        .booking .amenity-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Loyalty Steps in Dark Sections */
+        .about .loyalty-step,
+        .gallery .loyalty-step,
+        .booking .loyalty-step {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        footer h3,
+        footer p,
+        footer a {
+            color: white;
+        }
+        
+        footer .social-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Chatbot Styles */
+        .chatbot-icon {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-icon:hover {
+            transform: scale(1.1);
+            background-color: var(--accent);
+        }
+        
+        .chatbot-icon i {
+            color: white;
+            font-size: 24px;
+        }
+        
+        .chatbot-window {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            display: none;
+            overflow: hidden;
+        }
+        
+        .chatbot-window.active {
+            display: block;
+        }
+        
+        .chatbot-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        .chatbot-messages {
+            height: calc(100% - 130px);
+            padding: 15px;
+            overflow-y: auto;
+        }
+        
+        .chatbot-input {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .chatbot-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+        }
+        
+        .chatbot-input button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .chatbot-input button:hover {
+            background-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-container">
+                <a href="#" class="logo">Samfya<span>Waterfront</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                    <button class="close-menu" id="closeMenu">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#loyalty">Loyalty Program</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="videowater.mp4" type="video/mp4">
+        </video>
+        <div class="container">
+            <div class="hero-content" data-aos="fade-up">
+                <h1>Welcome to Samfya Waterfront Lodge</h1>
+                <p>Experience luxury and tranquility at Luapula's premier lakeside retreat</p>
+                <div class="hero-btns">
+                    <a href="#rooms" class="btn">Book Now</a>
+                    <a href="#gallery" class="btn btn-secondary">View Gallery</a>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>Our Story</h2>
+                    <p>Nestled along the pristine shores of Lake Bangweulu, Samfya Waterfront Lodge offers an unparalleled experience of luxury and natural beauty. Our lodge combines modern comfort with traditional Zambian hospitality, creating a perfect retreat for both leisure and business travelers.</p>
+                    <p>With stunning views of the lake, comfortable accommodations, and world-class amenities, we ensure every guest enjoys a memorable stay in the heart of Luapula Province.</p>
+                    <a href="#contact" class="btn">Contact Us</a>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <img src="topview.png" alt="Samfya Waterfront Lodge Aerial View">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="rooms">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Luxurious Accommodations</h2>
+            <div class="rooms-grid">
+                <div class="room-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="bathroom1.jpg" alt="Deluxe Room">
+                    <div class="room-info">
+                        <h3>Deluxe Room</h3>
+                        <p>Spacious rooms with lake views, modern amenities, and elegant furnishings.</p>
+                        <div class="room-price">
+                            <div class="currency">
+                                <span class="usd">$120 USD</span>
+                                <span class="zmw">K2,400 ZMW</span>
+                            </div>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <a href="#contact" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="room-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="bed1.jpg" alt="Executive Suite">
+                    <div class="room-info">
+                        <h3>Executive Suite</h3>
+                        <p>Luxurious suite with separate living area and premium amenities.</p>
+                        <div class="room-price">
+                            <div class="currency">
+                                <span class="usd">$180 USD</span>
+                                <span class="zmw">K3,600 ZMW</span>
+                            </div>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <a href="#contact" class="btn">Book Now</a>
+                    </div>
+                </div>
+                <div class="room-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="toiletbathroom.jpg" alt="Family Suite">
+                    <div class="room-info">
+                        <h3>Family Suite</h3>
+                        <p>Perfect for families with interconnected rooms and child-friendly amenities.</p>
+                        <div class="room-price">
+                            <div class="currency">
+                                <span class="usd">$250 USD</span>
+                                <span class="zmw">K5,000 ZMW</span>
+                            </div>
+                            <span class="per-night">per night</span>
+                        </div>
+                        <a href="#contact" class="btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="amenities">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">World-Class Amenities</h2>
+            <div class="amenities-grid">
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="pool.png" alt="Swimming Pool">
+                    <h3>Swimming Pool</h3>
+                    <p>Enjoy our infinity pool overlooking the lake</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="beachview.png" alt="Private Beach">
+                    <h3>Private Beach</h3>
+                    <p>Relax on our pristine private beach</p>
+                </div>
+                <div class="amenity-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="seats.jpg" alt="Restaurant">
+                    <h3>Fine Dining</h3>
+                    <p>Experience exquisite local and international cuisine</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="room1.jpg" alt="Luxury Room">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="beach.jpg" alt="Private Beach">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="seats.jpg" alt="Restaurant Seating">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="family.jpg" alt="Family Beach">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="restaurant.jpg" alt="Restaurant">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="bed1.jpg" alt="Executive Suite">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 947 Plot Lake Bangweulu, Samfya, Zambia</p>
+                    <p><i class="fas fa-phone"></i> +260(0)96 489 2755</p>
+                    <p><i class="fas fa-phone"></i> +260 973 045 769</p>
+                    <p><i class="fas fa-envelope"></i> samfyawaterfrontlodge@gmail.com</p>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-map" data-aos="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4192.191292318318!2d29.56234169727449!3d-11.374117631122349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x190da50f3c0d2f49%3A0x3b060a2a20fe9839!2sSamfya%20Water%20front%20Lodge!5e1!3m2!1sen!2szm!4v1746615485194!5m2!1sen!2szm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Amenities Section -->
+    <!-- Tourism Section -->
+    <section id="tourism" class="tourism">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Discover Samfya</h2>
+            <p class="text-center" data-aos="fade-up">Explore the natural beauty and cultural richness of Samfya and Lake Bangweulu</p>
+            <div class="tourism-slider">
+                <div class="tourism-slides" id="tourismSlides">
+                    <div class="tourism-slide">
+                        <img src="beach.jpg" alt="Samfya Beach">
+                        <div class="slide-content">
+                            <h3>Samfya Beach</h3>
+                            <p>Experience the 'Zambian Riviera' with pristine white sandy beaches stretching along the shores of Lake Bangweulu.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-slide">
+                        <img src="waterboy.jpg" alt="Bangweulu Wetlands">
+                        <div class="slide-content">
+                            <h3>Bangweulu Wetlands</h3>
+                            <p>Explore one of Africa's most important wetland ecosystems, home to the rare shoebill stork and endemic black lechwe.</p>
+                        </div>
+                    </div>
+                    <div class="tourism-slide">
+                        <img src="traditionalceremony.jpg" alt="Traditional Fishing Villages">
+                        <div class="slide-content">
+                            <h3>Traditional Fishing Villages</h3>
+                            <p>Visit local fishing communities and learn about traditional fishing methods that have sustained generations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-btn" id="prevSlide">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-btn" id="nextSlide">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="slider-dots" id="sliderDots">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Book Your Stay</h2>
+            <p class="text-center" data-aos="fade-up">Reserve your perfect getaway at Samfya Waterfront Lodge</p>
+            <div class="booking-container">
+                <div class="booking-form" data-aos="fade-right">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="roomType">Accommodation Type</label>
+                            <select class="form-control" id="roomType" required>
+                                <option value="">Select Room Type</option>
+                                <option value="standard">Standard Room</option>
+                                <option value="executive">Executive Suite</option>
+                                <option value="villa">Lakeside Villa</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkIn">Check-in Date</label>
+                                <input type="date" class="form-control" id="checkIn" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="checkOut">Check-out Date</label>
+                                <input type="date" class="form-control" id="checkOut" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adults">Adults</label>
+                                <select class="form-control" id="adults" required>
+                                    <option value="1">1</option>
+                                    <option value="2" selected>2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="children">Children</label>
+                                <select class="form-control" id="children">
+                                    <option value="0" selected>0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Payment Method</label>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <input type="radio" id="mobileMoney" name="payment" value="mobileMoney" required>
+                                    <label for="mobileMoney">
+                                        <i class="fas fa-mobile-alt"></i> Mobile Money
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="mastercard" name="payment" value="mastercard">
+                                    <label for="mastercard">
+                                        <i class="fab fa-cc-mastercard"></i> Mastercard
+                                    </label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="visa" name="payment" value="visa">
+                                    <label for="visa">
+                                        <i class="fab fa-cc-visa"></i> Visa
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="specialRequests">Special Requests</label>
+                            <textarea class="form-control" id="specialRequests" rows="3"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Check Availability</button>
+                    </form>
+                </div>
+                
+                <div class="booking-info" data-aos="fade-left">
+                    <h3>Why Book Directly With Us?</h3>
+                    <ul>
+                        <li>Best rate guarantee</li>
+                        <li>Free room upgrades when available</li>
+                        <li>Flexible cancellation policy</li>
+                        <li>Earn loyalty points with every stay</li>
+                        <li>Complimentary welcome drink</li>
+                        <li>Early check-in and late check-out when available</li>
+                    </ul>
+                    
+                    <h3 class="mt-4">For Group Bookings</h3>
+                    <p>If you're booking for a group, corporate event, or conference, please contact our reservations team directly for special rates and packages.</p>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loyalty Program Section -->
+    <section id="loyalty" class="loyalty">
+        <div class="container">
+            <h2 class="text-center" data-aos="fade-up">Samfya Rewards</h2>
+            <p class="text-center" data-aos="fade-up">Join our loyalty program and enjoy exclusive benefits and rewards</p>
+            <div class="loyalty-content">
+                <div class="loyalty-text" data-aos="fade-right">
+                    <p>At Samfya Waterfront Lodge, we value our repeat guests. Our Samfya Rewards program is designed to thank you for your loyalty with points that can be redeemed for free nights, room upgrades, spa treatments, and more.</p>
+                    
+                    <div class="loyalty-steps">
+                        <div class="loyalty-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Sign Up</h4>
+                                <p>Join our loyalty program for free at reception or online.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="loyalty-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Earn Points</h4>
+                                <p>Earn 10 points for every K100 spent on accommodation and 5 points for every K100 spent on food, beverages, and other services.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="loyalty-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Enjoy Benefits</h4>
+                                <p>Access exclusive member rates, early check-in, late check-out, and special offers.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="loyalty-step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Redeem Rewards</h4>
+                                <p>Use your points for free nights, room upgrades, dining vouchers, and spa treatments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="btn mt-4" id="loyaltySignup">Join Samfya Rewards Now</button>
+                </div>
+                
+                <div class="loyalty-image" data-aos="fade-left">
+                    <img src="loyalty1.jpg" alt="Samfya Rewards Program">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Samfya Waterfront Lodge</h3>
+                    <p>Your premier lakeside retreat in Luapula Province</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Samfya Waterfront Lodge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu" id="closeMobileMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#loyalty">Loyalty Program</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Add before closing body tag -->
+    <div class="chatbot-icon" id="chatbotIcon">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chatbot-header">
+            <h3>Chat with Us</h3>
+            <button class="chatbot-close" id="chatbotClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <!-- Messages will be added here -->
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message..." id="chatbotInput">
+            <button id="chatbotSend">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 0);
+        });
+        
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.style.display = 'flex';
+        });
+        
+        closeMobileMenu.addEventListener('click', function() {
+            mobileMenu.style.display = 'none';
+        });
+        
+        // Tourism Slider
+        const tourismSlides = document.getElementById('tourismSlides');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        const prevSlideBtn = document.getElementById('prevSlide');
+        const nextSlideBtn = document.getElementById('nextSlide');
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.tourism-slide').length;
+        
+        function showSlide(index) {
+            if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                currentSlide = 0;
+            } else {
+                currentSlide = index;
+            }
+            
+            tourismSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            sliderDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+        
+        prevSlideBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        nextSlideBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+        
+        sliderDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+        });
+        
+        // Auto slide
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Pause auto slide on hover
+        tourismSlides.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        tourismSlides.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+        });
+        
+        // Booking Form
+        const bookingForm = document.getElementById('bookingForm');
+        const bookingConfirmModal = document.getElementById('bookingConfirmModal');
+        const closeBookingModal = document.getElementById('closeBookingModal');
+        const closeBookingBtn = document.getElementById('closeBookingBtn');
+        
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            bookingConfirmModal.style.display = 'flex';
+        });
+        
+        closeBookingModal.addEventListener('click', function() {
+            bookingConfirmModal.style.display = 'none';
+        });
+        
+        closeBookingBtn.addEventListener('click', function() {
+            bookingConfirmModal.style.display = 'none';
+        });
+        
+        // Loyalty Program Modal
+        const loyaltySignup = document.getElementById('loyaltySignup');
+        const loyaltyModal = document.getElementById('loyaltyModal');
+        const closeLoyaltyModal = document.getElementById('closeLoyaltyModal');
+        const submitLoyalty = document.getElementById('submitLoyalty');
+        
+        loyaltySignup.addEventListener('click', function() {
+            loyaltyModal.style.display = 'flex';
+        });
+        
+        closeLoyaltyModal.addEventListener('click', function() {
+            loyaltyModal.style.display = 'none';
+        });
+        
+        submitLoyalty.addEventListener('click', function() {
+            alert('Thank you for joining Samfya Rewards! Your membership number will be sent to your email.');
+            loyaltyModal.style.display = 'none';
+        });
+        
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === loyaltyModal) {
+                loyaltyModal.style.display = 'none';
+            }
+            if (e.target === bookingConfirmModal) {
+                bookingConfirmModal.style.display = 'none';
+            }
+        });
+
+        // Chatbot functionality
+        const chatbotIcon = document.getElementById('chatbotIcon');
+        const chatbotWindow = document.getElementById('chatbotWindow');
+        const chatbotClose = document.getElementById('chatbotClose');
+        const chatbotInput = document.getElementById('chatbotInput');
+        const chatbotSend = document.getElementById('chatbotSend');
+        const chatbotMessages = document.getElementById('chatbotMessages');
+
+        chatbotIcon.addEventListener('click', () => {
+            chatbotWindow.classList.add('active');
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        });
+
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const message = chatbotInput.value.trim();
+            if (message) {
+                addMessage(message, 'user');
+                chatbotInput.value = '';
+                // Simulate bot response
+                setTimeout(() => {
+                    addMessage('Thank you for your message. Our team will get back to you soon.', 'bot');
+                }, 1000);
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.textContent = text;
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+    </script>
+</body>
+</html>

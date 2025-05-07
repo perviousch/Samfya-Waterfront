@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Mockups | Samfya Waterfront Hotel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #1a73e8;
+            --secondary: #34a853;
+            --accent: #fbbc05;
+            --light: #f8f9fa;
+            --dark: #202124;
+            --sand: #f5e1b9;
+            --water: #a8d5e2;
+            --facebook: #1877f2;
+            --instagram: #e1306c;
+            --google: #ea4335;
+            --booking: #003580;
+            --expedia: #00355f;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background: url('beachview.png') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: -1;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0d5bbc;
+            transform: translateY(-2px);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Mockup Sections */
+        .mockup-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .mockup-section h2 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 30px;
+        }
+        
+        .mockup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .mockup-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .mockup-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mockup-header {
+            padding: 15px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .mockup-platform {
+            display: flex;
+            align-items: center;
+        }
+        
+        .mockup-platform i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .mockup-type {
+            font-size: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            padding: 3px 8px;
+            border-radius: 20px;
+        }
+        
+        .mockup-content {
+            padding: 20px;
+        }
+        
+        .mockup-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        .mockup-description {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .mockup-image {
+            width: 100%;
+            height: 180px;
+            background-color: #f0f0f0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .mockup-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .mockup-stat {
+            display: flex;
+            align-items: center;
+        }
+        
+        .mockup-stat i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+        
+        /* Google Ads Styles */
+        .google-search-ad {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+        
+        .google-search-ad .ad-url {
+            color: #006621;
+            font-size: 14px;
+        }
+        
+        .google-search-ad .ad-title {
+            color: #1a0dab;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 5px 0;
+            display: block;
+        }
+        
+        .google-search-ad .ad-title:hover {
+            text-decoration: underline;
+        }
+        
+        .google-search-ad .ad-description {
+            color: #545454;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .google-search-ad .ad-extensions {
+            margin-top: 5px;
+        }
+        
+        .google-search-ad .ad-extension {
+            color: #545454;
+            font-size: 14px;
+            margin-right: 15px;
+        }
+        
+        .google-display-ad {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            max-width: 300px;
+        }
+        
+        .google-display-ad .ad-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .google-display-ad .ad-content {
+            padding: 15px;
+        }
+        
+        .google-display-ad .ad-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .google-display-ad .ad-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .google-display-ad .ad-cta {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        /* Social Media Ads Styles */
+        .facebook-ad {
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        .facebook-ad .ad-header {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+        }
+        
+        .facebook-ad .page-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .facebook-ad .page-info {
+            flex: 1;
+        }
+        
+        .facebook-ad .page-name {
+            font-weight: bold;
+            color: #385898;
+            margin-bottom: 2px;
+        }
+        
+        .facebook-ad .post-time {
+            font-size: 12px;
+            color: #606770;
+        }
+        
+        .facebook-ad .sponsored {
+            font-size: 12px;
+            color: #606770;
+        }
+        
+        .facebook-ad .ad-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .facebook-ad .ad-content {
+            padding: 12px;
+        }
+        
+        .facebook-ad .ad-text {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .facebook-ad .ad-cta {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            background-color: var(--facebook);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .facebook-ad .ad-engagement {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 12px;
+            border-top: 1px solid #ddd;
+            font-size: 13px;
+            color: #606770;
+        }
+        
+        .facebook-ad .engagement-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .facebook-ad .engagement-item i {
+            margin-right: 5px;
+        }
+        
+        /* Instagram Ad */
+        .instagram-ad {
+            max-width: 400px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .instagram-ad .ad-header {
+            display: flex;
+            align-items: center;
+            padding: 14px;
+        }
+        
+        .instagram-ad .profile-pic {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f0f0f0;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+        
+        .instagram-ad .username {
+            font-weight: 600;
+            color: #262626;
+        }
+        
+        .instagram-ad .sponsored {
+            margin-left: auto;
+            font-size: 12px;
+            color: #8e8e8e;
+        }
+        
+        .instagram-ad .ad-image {
+            width: 100%;
+            height: 400px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .instagram-ad .ad-actions {
+            display: flex;
+            padding: 8px 16px;
+        }
+        
+        .instagram-ad .action-icon {
+            margin-right: 16px;
+            font-size: 24px;
+            color: #262626;
+        }
+        
+        .instagram-ad .ad-likes {
+            padding: 0 16px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .instagram-ad .ad-caption {
+            padding: 0 16px 16px;
+            font-size: 14px;
+        }
+        
+        .instagram-ad .username-caption {
+            font-weight: 600;
+            margin-right: 4px;
+        }
+        
+        .instagram-ad .ad-cta {
+            display: block;
+            text-align: center;
+            padding: 8px;
+            background-color: var(--instagram);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            margin: 0 16px 16px;
+        }
+        
+        /* Travel Booking Ads */
+        .booking-ad {
+            max-width: 500px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .booking-ad .ad-image {
+            width: 100%;
+            height: 250px;
+            background-color: #f0f0f0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .booking-ad .ad-rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--booking);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .booking-ad .ad-content {
+            padding: 15px;
+        }
+        
+        .booking-ad .ad-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--booking);
+            margin-bottom: 5px;
+        }
+        
+        .booking-ad .ad-location {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .booking-ad .ad-features {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .booking-ad .ad-feature {
+            font-size: 12px;
+            background-color: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 20px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .booking-ad .ad-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #008009;
+            margin-bottom: 10px;
+        }
+        
+        .booking-ad .ad-availability {
+            font-size: 12px;
+            color: #d83b01;
+            margin-bottom: 10px;
+        }
+        
+        .booking-ad .ad-cta {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            background-color: var(--booking);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        /* Email Marketing */
+        .email-mockup {
+            max-width: 600px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        
+        .email-header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .email-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .email-subject {
+            font-size: 18px;
+        }
+        
+        .email-body {
+            padding: 20px;
+            background-color: white;
+        }
+        
+        .email-greeting {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .email-content {
+            margin-bottom: 20px;
+        }
+        
+        .email-image {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-style: italic;
+        }
+        
+        .email-cta {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .email-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .email-footer {
+            background-color: #f5f5f5;
+            padding: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .email-social {
+            margin-bottom: 10px;
+        }
+        
+        .email-social a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #666;
+            color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .email-unsubscribe {
+            text-decoration: underline;
+            color: #666;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .mockup-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+            
+            .mockup-section {
+                padding: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Digital Marketing Campaign Mockups</h1>
+            <p>Comprehensive marketing strategy to increase Samfya Waterfront Hotel's online presence, bookings, and brand awareness through multiple digital channels.</p>
+        </div>
+    </section>
+
+    <!-- Google Ads Section -->
+    <section id="google-ads">
+        <div class="container">
+            <div class="mockup-section">
+                <h2>Google Ads Campaigns</h2>
+                <p>Strategic Google Ads campaigns targeting potential guests searching for accommodations in Zambia and specifically in the Luapula Province.</p>
+                
+                <h3>Search Ads</h3>
+                <div class="google-search-ad">
+                    <div class="ad-url">www.samfyawaterfront.com/special-offers</div>
+                    <a href="#" class="ad-title">Samfya Waterfront Hotel | Luxury on Lake Bangweulu | Official Site</a>
+                    <div class="ad-description">Experience luxury on Zambia's hidden gem. White sandy beaches, lake views, special packages for NGOs and corporate clients. Book direct for best rates!</div>
+                    <div class="ad-extensions">
+                        <span class="ad-extension"><i class="fas fa-star"></i> 4.8/5 - 120 reviews</span>
+                        <span class="ad-extension"><i class="fas fa-phone"></i> +260 76 1234567</span>
+                    </div>
+                </div>
+                
+                <div class="google-search-ad">
+                    <div class="ad-url">www.samfyawaterfront.com/conference</div>
+                    <a href="#" class="ad-title">Corporate Events & Conferences | Samfya Waterfront Hotel</a>
+                    <div class="ad-description">State-of-the-art conference facilities with lake views. All-inclusive packages for NGOs and corporate clients. Free Wi-Fi, AV equipment, and catering.</div>
+                    <div class="ad-extensions">
+                        <span class="ad-extension"><i class="fas fa-users"></i> Capacity up to 100 people</span>
+                        <span class="ad-extension"><i class="fas fa-envelope"></i> events@samfyawaterfront.com</span>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5">Display Ads</h3>
+                <div class="mockup-grid">
+                    <div class="google-display-ad">
+                        <div class="ad-image">
+                            <img src="topview.png" alt="Hotel Exterior" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">Escape to Samfya's White Beaches</div>
+                            <div class="ad-description">Luxury lakeside accommodation with stunning views. Book now and save 15%!</div>
+                            <a href="#" class="ad-cta">Book Your Stay</a>
+                        </div>
+                    </div>
+                    
+                    <div class="google-display-ad">
+                        <div class="ad-image">
+                            <img src="bed1.jpg" alt="Lake View Suite" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">Zambia's Premier Lakeside Retreat</div>
+                            <div class="ad-description">Experience luxury on Lake Bangweulu. Exclusive offers for direct bookings!</div>
+                            <a href="#" class="ad-cta">View Special Offers</a>
+                        </div>
+                    </div>
+                    
+                    <div class="google-display-ad">
+                        <div class="ad-image">
+                            <img src="seats.jpg" alt="Conference Room" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">Corporate Events with a View</div>
+                            <div class="ad-description">State-of-the-art facilities for your next corporate event or conference.</div>
+                            <a href="#" class="ad-cta">Request a Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-media">
+        <div class="container">
+            <div class="mockup-section">
+                <h2>Social Media Campaigns</h2>
+                <p>Engaging social media content to build brand awareness, showcase the hotel's unique features, and drive direct bookings.</p>
+                
+                <h3>Facebook Ads</h3>
+                <div class="mockup-grid">
+                    <div class="facebook-ad">
+                        <div class="ad-header">
+                            <div class="page-icon">SW</div>
+                            <div class="page-info">
+                                <div class="page-name">Samfya Waterfront Hotel</div>
+                                <div class="post-time">Sponsored · <i class="fas fa-globe"></i></div>
+                            </div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-text">Experience the beauty of Zambia's hidden gem! 🌊 White sandy beaches, crystal clear waters, and luxury accommodation at Samfya Waterfront Hotel. Book now and get 20% off your stay!</div>
+                        </div>
+                        <div class="ad-image">
+                            <img src="beach.jpg" alt="Lake View" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">SPECIAL OFFER: 20% OFF YOUR STAY</div>
+                            <div class="ad-description">Valid for bookings made before December 31st. Use code: SAMFYA20</div>
+                            <a href="#" class="ad-cta">Book Now</a>
+                        </div>
+                        <div class="ad-engagement">
+                            <div class="engagement-item"><i class="fas fa-thumbs-up"></i> 3.2K Likes</div>
+                            <div class="engagement-item"><i class="fas fa-comment"></i> 456 Comments</div>
+                            <div class="engagement-item"><i class="fas fa-share"></i> 789 Shares</div>
+                        </div>
+                    </div>
+                    
+                    <div class="facebook-ad">
+                        <div class="ad-header">
+                            <div class="page-icon">SW</div>
+                            <div class="page-info">
+                                <div class="page-name">Samfya Waterfront Hotel</div>
+                                <div class="post-time">Sponsored · <i class="fas fa-globe"></i></div>
+                            </div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-text">Planning a corporate retreat or NGO workshop? 🏢 Our state-of-the-art conference facilities combined with the serene environment of Lake Bangweulu create the perfect setting for productive meetings and team building.</div>
+                        </div>
+                        <div class="ad-image">
+                            <img src="seats.jpg" alt="Conference Room" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">CORPORATE PACKAGE: ALL-INCLUSIVE</div>
+                            <div class="ad-description">Accommodation, meals, conference facilities, and team building activities.</div>
+                            <a href="#" class="ad-cta">Request a Quote</a>
+                        </div>
+                        <div class="ad-engagement">
+                            <div class="engagement-item"><i class="fas fa-thumbs-up"></i> 1.8K Likes</div>
+                            <div class="engagement-item"><i class="fas fa-comment"></i> 234 Comments</div>
+                            <div class="engagement-item"><i class="fas fa-share"></i> 345 Shares</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3 class="mt-5">Instagram Ads</h3>
+                <div class="mockup-grid">
+                    <div class="instagram-ad">
+                        <div class="ad-header">
+                            <div class="profile-pic">SW</div>
+                            <div class="username">samfyawaterfront</div>
+                            <div class="sponsored">Sponsored</div>
+                        </div>
+                        <div class="ad-image">
+                            <img src="beachview.png" alt="Sunset on Lake" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-actions">
+                            <div class="action-icon"><i class="far fa-heart"></i></div>
+                            <div class="action-icon"><i class="far fa-comment"></i></div>
+                            <div class="action-icon"><i class="far fa-paper-plane"></i></div>
+                        </div>
+                        <div class="ad-likes">
+                            <span>5,432 likes</span>
+                        </div>
+                        <div class="ad-caption">
+                            <span class="username-caption">samfyawaterfront</span> Breathtaking sunsets await you at Samfya Waterfront Hotel. Experience the magic where the water meets the sky. 🌅 #SamfyaBeach #LakeBangweulu #ZambianGetaway #LuxuryTravel
+                        </div>
+                        <a href="#" class="ad-cta">Book Now</a>
+                    </div>
+                    
+                    <div class="instagram-ad">
+                        <div class="ad-header">
+                            <div class="profile-pic">SW</div>
+                            <div class="username">samfyawaterfront</div>
+                            <div class="sponsored">Sponsored</div>
+                        </div>
+                        <div class="ad-image">
+                            <img src="bed1.jpg" alt="Luxury Suite" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="ad-actions">
+                            <div class="action-icon"><i class="far fa-heart"></i></div>
+                            <div class="action-icon"><i class="far fa-comment"></i></div>
+                            <div class="action-icon"><i class="far fa-paper-plane"></i></div>
+                        </div>
+                        <div class="ad-likes">
+                            <span>4,876 likes</span>
+                        </div>
+                        <div class="ad-caption">
+                            <span class="username-caption">samfyawaterfront</span> Wake up to this view every morning in our Executive Lakeside Suite. Luxury redefined on the shores of Lake Bangweulu. ✨ #LuxuryAccommodation #SamfyaWaterfront #ZambianHospitality
+                        </div>
+                        <a href="#" class="ad-cta">View Rooms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Platforms Section -->
+    <section id="travel-platforms">
+        <div class="container">
+            <div class="mockup-section">
+                <h2>Travel Booking Platforms</h2>
+                <p>Strategic presence on major travel booking platforms to capture potential guests searching for accommodations in Zambia.</p>
+                
+                <div class="mockup-grid">
+                    <div class="booking-ad">
+                        <div class="ad-image">
+                            <img src="topview.png" alt="Hotel Exterior" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="ad-rating">9.2</div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title">Samfya Waterfront Hotel</div>
+                            <div class="ad-location">Samfya Beach, Luapula Province • 0.1 km from beach</div>
+                            <div class="ad-features">
+                                <span class="ad-feature">Lake view</span>
+                                <span class="ad-feature">Free WiFi</span>
+                                <span class="ad-feature">Restaurant</span>
+                                <span class="ad-feature">Swimming pool</span>
+                                <span class="ad-feature">Air conditioning</span>
+                            </div>
+                            <div class="ad-price">K1,500 per night</div>
+                            <div class="ad-availability">Only 2 rooms left at this price!</div>
+                            <a href="#" class="ad-cta">See Availability</a>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-ad" style="border-color: #f0802a;">
+                        <div class="ad-image">
+                            <img src="beachview.png" alt="Lake View Room" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="ad-rating" style="background-color: #f0802a;">4.8/5</div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title" style="color: #f0802a;">Samfya Waterfront Hotel</div>
+                            <div class="ad-location">Samfya, Zambia • Exceptional location</div>
+                            <div class="ad-features">
+                                <span class="ad-feature">Beachfront</span>
+                                <span class="ad-feature">Free cancellation</span>
+                                <span class="ad-feature">Breakfast included</span>
+                                <span class="ad-feature">Free parking</span>
+                            </div>
+                            <div class="ad-price" style="color: #f0802a;">K1,650 per night</div>
+                            <div class="ad-availability" style="color: #f0802a;">Hot deal! 30% off regular price</div>
+                            <a href="#" class="ad-cta" style="background-color: #f0802a;">Book Now</a>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-ad" style="border-color: #00a680;">
+                        <div class="ad-image">
+                            <img src="pool.png" alt="Hotel Amenities" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="ad-rating" style="background-color: #00a680;">4.5/5</div>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-title" style="color: #00a680;">Samfya Waterfront Hotel</div>
+                            <div class="ad-location">Samfya Beach Road, Luapula • Traveler's Choice 2023</div>
+                            <div class="ad-features">
+                                <span class="ad-feature">Excellent service</span>
+                                <span class="ad-feature">Conference facilities</span>
+                                <span class="ad-feature">Water activities</span>
+                                <span class="ad-feature">Spa services</span>
+                            </div>
+                            <div class="ad-price" style="color: #00a680;">K1,750 per night</div>
+                            <div class="ad-availability" style="color: #00a680;">Recommended for business travelers</div>
+                            <a href="#" class="ad-cta" style="background-color: #00a680;">View Deal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Marketing Section -->
+    <section id="email-marketing">
+        <div class="container">
+            <div class="mockup-section">
+                <h2>Email Marketing Campaigns</h2>
+                <p>Targeted email campaigns to nurture leads, promote special offers, and encourage repeat bookings.</p>
+                
+                <div class="email-mockup">
+                    <div class="email-header">
+                        <div class="email-logo">Samfya Waterfront Hotel</div>
+                        <div class="email-subject">Special Offer: 20% Off Your Next Stay</div>
+                    </div>
+                    <div class="email-body">
+                        <div class="email-greeting">Dear Valued Guest,</div>
+                        <div class="email-content">
+                            <p>We hope this email finds you well. As one of our valued guests, we wanted to extend a special offer exclusively for you.</p>
+                            <p>Book your next stay at Samfya Waterfront Hotel before December 31st and enjoy 20% off our regular rates. Whether you're planning a relaxing getaway or a productive business trip, our lakeside retreat offers the perfect setting.</p>
+                            <div class="email-image">
+                                <img src="beach.jpg" alt="Hotel Exterior with Lake View" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <p>As a member of our Samfya Rewards program, you'll also earn double points on this booking, which can be redeemed for free nights, room upgrades, and more.</p>
+                            <p>Our hotel features:</p>
+                            <ul>
+                                <li>Luxurious rooms with stunning lake views</li>
+                                <li>Fine dining restaurant serving local and international cuisine</li>
+                                <li>State-of-the-art conference facilities</li>
+                                <li>Swimming pool and spa services</li>
+                                <li>Water activities including boat tours and fishing expeditions</li>
+                            </ul>
+                        </div>
+                        <div class="email-cta">
+                            <a href="#" class="email-button">Book Now with Code: SPECIAL20</a>
+                        </div>
+                        <div class="email-content">
+                            <p>We look forward to welcoming you back to Samfya Waterfront Hotel.</p>
+                            <p>Warm regards,<br>The Samfya Waterfront Team</p>
+                        </div>
+                    </div>
+                    <div class="email-footer">
+                        <div class="email-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                        <div>Samfya Waterfront Hotel | Samfya Beach Road, Luapula Province, Zambia</div>
+                        <div>Tel: +260 76 1234567 | Email: info@samfyawaterfront.com</div>
+                        <div class="email-unsubscribe">Unsubscribe | Privacy Policy</div>
+                    </div>
+                </div>
+                
+                <div class="email-mockup" style="margin-top: 40px;">
+                    <div class="email-header">
+                        <div class="email-logo">Samfya Waterfront Hotel</div>
+                        <div class="email-subject">Corporate Retreat Package - Limited Time Offer</div>
+                    </div>
+                    <div class="email-body">
+                        <div class="email-greeting">Dear Corporate Partner,</div>
+                        <div class="email-content">
+                            <p>Is your team in need of a productive retreat away from the office? Samfya Waterfront Hotel offers the perfect blend of business and leisure for your next corporate event.</p>
+                            <p>For a limited time, we're offering an all-inclusive corporate retreat package that includes:</p>
+                            <ul>
+                                <li>Accommodation in our comfortable rooms and suites</li>
+                                <li>Full-day use of our conference facilities</li>
+                                <li>All meals and refreshments</li>
+                                <li>Team building activities by the lake</li>
+                                <li>Complimentary Wi-Fi and business services</li>
+                            </ul>
+                            <div class="email-image">
+                                <img src="seats.jpg" alt="Conference Room Setup" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <p>Our serene lakeside location provides the ideal environment for strategic planning, team building, and creative thinking. With modern facilities and attentive service, we ensure your corporate event is both productive and memorable.</p>
+                        </div>
+                        <div class="email-cta">
+                            <a href="#" class="email-button">Request a Custom Quote</a>
+                        </div>
+                        <div class="email-content">
+                            <p>We look forward to hosting your team at Samfya Waterfront Hotel.</p>
+                            <p>Best regards,<br>Corporate Events Team<br>Samfya Waterfront Hotel</p>
+                        </div>
+                    </div>
+                    <div class="email-footer">
+                        <div class="email-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div>Samfya Waterfront Hotel | Samfya Beach Road, Luapula Province, Zambia</div>
+                        <div>Tel: +260 76 1234567 | Email: corporate@samfyawaterfront.com</div>
+                        <div class="email-unsubscribe">Unsubscribe | Privacy Policy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="text-center">© 2025 Digital Marketing Proposal for Samfya Waterfront Hotel. All mockups are for demonstration purposes only.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple script to handle smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
